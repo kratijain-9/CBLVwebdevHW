@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+</head>
+
+<body>
+    <h1>This is Time Table</h1>
+    <table border="5" cellspacing="10" cellpadding="10" bgcolor="lightgrey">
+        <thead>
+            <tr>
+                <th>Days / Periods</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th></th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mon</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Hindi</td>
+                <td rowspan="6">B <br> R <br> E <br> A <br> K</td>
+                <!--use row span-->
+                <td>Maths</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+            </tr>
+            <tr>
+                <td>Tue</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Hindi</td>
+                <td>Maths</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+            </tr>
+            <tr>
+                <td>Wed</td>
+                <td>Science</td>
+                <td>English</td>
+                <td rowspan="3">Hindi</td>
+                <td>Maths</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+            </tr>
+            <tr>
+                <td>Thu</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Maths</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+            </tr>
+            <tr>
+                <td>Fri</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Maths</td>
+                <td>Games</td>
+                <td>Moral Science</td>
+            </tr>
+            <tr>
+                <td>Sat</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>Hindi</td>
+                <td colspan="3">Maths</td>
+
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="8">This is Class VIII</th>
+            </tr>
+        </tfoot>
+    </table>
+    <h1>My Bio Data</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Personal Information</legend>
+            FirstName: <input type="text" placeholder="First Name" required>
+            LastName: <input type="text" placeholder="Last Name">
+            <br> <br>
+            Male: <input type="radio" name="gender">
+            <!--same value of name attribute given to all-->
+            Female: <input type="radio" name="gender">
+            Other: <input type="radio" name="gender">
+            <br> <br>
+            Date of Birth : <input type="date" required> <br> <br>
+            E-Mail : <input type="email" placeholder="Enter Your Email" required> <br> <br>
+            Phone : <input type="number" placeholder="+91" required> <br> <br>
+            Height : <input type="number" placeholder="Height in Feet">
+
+
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            School Name : <input type="text" placeholder="School Name" required> <br> <br>
+            Class : <input type="number" placeholder="Enter Class" required> <br> <br>
+            Stream :
+            <select>
+                <option>Stream</option>
+                <option>Science</option>
+                <option>Commerce</option>
+                <option>Humanities</option>
+            </select>
+            <br> <br>
+            Marksheet : <input type="file" required>
+        </fieldset>
+        <br>
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>
