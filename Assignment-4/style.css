@@ -6,40 +6,47 @@ body{
     background-color: rgb(92, 85, 85);
 }
 .navbar{
-    height: 69px;
+    
     width: 100vw;
     background-color: rgb(92, 85, 85);
     display: flex;
     color: orange;
     font-size: 28px;
-    /* justify-content: space-evenly; */
-    align-items: center; /* middle of cross axis*/
-    /* flex-direction: row-reverse; */
+    
+    align-items: center; 
+
     position: fixed;
     font-family: 'Architects Daughter', cursive;
-    /* box-shadow: 0px 2px 2px grey; */
+
     z-index: 5;
    flex-wrap: wrap;
+   padding: 10px;
+   /* border: 1px solid yellow; */
     
+}
+.second {
+    display: flex;
+    margin-left: auto;
+    width: 60%;
+    /* border: 1px solid white; */
+    justify-content: space-evenly;
 }
 .navbar:hover{
     box-shadow: 0px 2px 2px grey;
 }
 nav div a{
-    margin: 0px 10px 0px 10px;
+    /* margin: 0px 10px 0px 10px; */
     color: orange;
     text-decoration: none;
-    height: 50px;
-    width: 50px;
-    /* border: 1px solid white; */
+    
+    
+    border-radius: 10%; 
     padding: 5px 10px 5px 10px;
-    border-radius: 10%;
     
    
 }
 .companyname{
-    margin-left: 40px;
-    margin-right: 360px;
+  
     color: yellowgreen;
     font-size: 37px;
     font-weight: 900;
@@ -49,35 +56,68 @@ nav div a:hover{
     color: whitesmoke;
 }
 
-header{
-    display: inline;
-    height: 910px;
-    width: 460px;
-    /* border: 1px solid blue; */
-    position: absolute;
-    /* float: left; */
-}
-header div{
-    height: 910px;
-    width: 460px;
-}
-header div img{
-    height: 910px;
-    width: 460px;
+/* responsiveness in navbar */
+
+@media screen and (max-width:890px){
+    .navbar{
+        justify-content: start;
+
+    }
+    .second{
+        margin-left: unset;
+        width: unset;
+        
+    }
     
     
 }
-header div:nth-of-type(1){
+@media screen and (max-width:540px) {
+    .navbar{
+        flex-direction: column;
+    }
+    .second{
+        flex-direction: column;
+    }
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    background-color: rgb(87, 83, 85);
+    grid-template-rows: repeat(2,600px);
+    
+}
+
+main article:nth-of-type(1){
+   
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+
+main article div img{
+    height: 100%;
+    width: 100%;
+    
+    
+} 
+main article:nth-of-type(1) div:nth-of-type(1){
     z-index: 4;
     position: absolute;
     animation-name: fadeout;
     animation-duration: 16s;
     animation-delay: 1s;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    /* animation-play-state: paused; */
+    animation-play-state: paused;
+    height: 100%;
+    width: 100%;
 
 }
-header div:nth-of-type(2){
+main article:nth-of-type(1) div:nth-of-type(2){
     z-index: 3;
     position: absolute;
     animation-name: fadeout;
@@ -85,10 +125,12 @@ header div:nth-of-type(2){
     animation-delay: 6s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    /* animation-play-state: paused; */
+    animation-play-state: paused;
+    height: 100%;
+    width: 100%;
 
 }
-header div:nth-of-type(3){
+main article:nth-of-type(1) div:nth-of-type(3){
     z-index: 2;
     position: absolute;
     animation-name: fadeout;
@@ -96,11 +138,15 @@ header div:nth-of-type(3){
     animation-delay: 12s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    /* animation-play-state: paused; */
+    animation-play-state: paused;
+    height: 100%;
+    width: 100%;
 
 }
-header div:nth-of-type(4){
+main article:nth-of-type(1) div:nth-of-type(4){
     z-index: 1;
+    height: 100%;
+    width: 100%;
 
 }
 
@@ -112,51 +158,37 @@ header div:nth-of-type(4){
     }
 
 }
-/* @keyframes fadeout2{
-    100%{
-        opacity: 0;
-    }
-} */
 
 
-/* main  */
 
-main{
-    width: 63.5vw;
-    height: 910px;
-    display: flex;
-    margin-left: 450px;
-    /* margin-right: 0px; */
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    /* border: 1px solid grey; */
-    /* padding: 8px; */
-    background-color: rgb(87, 83, 85);
-    
-}
 main article{
-    height: 390px;
-    width: 350px;
-    /* border: 2px solid rgb(116, 121, 121); */
-    /* box-shadow: 2px 2px 5px grey; */
+
+    
     text-align: center;
     font-size: 18px;
-    /* margin: 10px; */
+    
 }
-main article img{
-    height: 180px;
-    width: 270px;
-    margin-top: 10px;
+.art img{
+    margin-top: 40px;
+    height: 30%;
+    width: 80%;
+    
     box-shadow: 0px 0px 10px rgb(104, 103, 103);
     border-radius: 6px;
     
 }
+#i1,#i2{
+    margin-top: 100px;
+}
 main article p{
     margin-top: 9px;
+    font-size: 1.2em;
+    color: rgb(163, 159, 137)
 }
+
 .bl{
     font-weight: 900;
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(153, 185, 87);
 }
 .btn{
@@ -175,46 +207,43 @@ main article p{
     color: rgb(65, 60, 60);
 }
 
-main article:hover{
+main .art:hover{
     transform: scale(1.02);
     transition: 0.35s;
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
     cursor: pointer;
-    z-index: 1;
+    /* z-index: 1; */
     box-shadow: 2px 2px 5px grey;
 }
-main article:nth-of-type(1){
-    margin-top: 100px;
-}
-main article:nth-of-type(2){
-    margin-top: 100px;
-}
-main article:nth-of-type(3){
-    margin-top: 10px;
-}
-main article:nth-of-type(4){
-    margin-top: 10px;
-}
-/* 
-@media screen and (max-width:630px) {
-    nav{
-        height: 100px;
-        flex-direction: column;
-        align-content: center;
-        height: 200px;
-    }
-    ul{
-        flex-direction: column;
-        align-items: center;
-        height: 100px;
-    }
+
+@media screen and (max-width:900px) {
     main{
-        margin-top: 180px;
+        grid-template-rows: repeat(3,540px);
+        grid-template-columns: repeat(auto-fill,minmax(380px,1fr));
     }
-    main article p{
-        visibility: hidden;
+    main article:nth-of-type(1){
+   
+        position: relative;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        
     }
-} */
+    #i1{
+        margin-top: 40px;
+    }
+    
+}
+@media screen and (max-width:760px) {
+    main{
+        grid-template-rows: repeat(5,510px);
+    }
+    .art img{
+        height: 40%;
+    }
+    
+}
 
 section{
     height: 500px;
@@ -224,27 +253,25 @@ section{
 }
 
 .menu{
-    height: 600px;
-    width: 92vw;
-    margin: 10px auto;
-    /* border: 1px solid black; */
+ 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    font-size: 30px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    font-size: 1em;
     gap: 20px;
-    grid-template-rows: 50px;
+
     background-color: rgb(111, 107, 114);
     padding: 10px;
     border-radius: 20px;
 }
 
-/* menu  */
+
+
 .menu div{
     padding: 5px;
     background-color: rgb(143, 110, 127);
     text-align: center;
     color: rgb(109, 226, 148);
-    font-size: 40px;
+    font-size: 3em;
     border-radius: 20px;
     color: burlywood;
     font-family: 'Architects Daughter', cursive;
@@ -267,19 +294,63 @@ section{
     color: black;
     
 }
+span{
+    color: white;
+    font-size: 0.5em;
+}
+@media screen and (max-width:870px) {
+    
+    .menu{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+
+        
+    }
+    .menuhead{
+        grid-column-start: 1;
+        grid-column-end: 3;
+       
+        
+    }
+   
+    
+}
+@media screen and (max-width:750px) {
+    
+    .menu{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+
+        
+    }
+    .menuhead{
+        grid-column-start: 1;
+        grid-column-end: 4;
+       
+        
+    }
+   
+    
+}
+@media screen and (max-width:620px) {
+    
+    .menu{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+ 
+        
+    }
+    .menuhead{
+        grid-column-start: 1;
+        grid-column-end: 2;
+       
+        
+    }
+   
+    
+}
 
 /* form */
-section{
+.sf{
     height: 720px;
     width: 98.4vw;
-    /* background-color: rgb(248, 209, 135); */
-    border-radius: 0px 0px 15px 15px;
-    /* border: 1px solid whitesmoke; */
-    border-top: 1px solid orange;
-    /* position: absolute; */
-    /* margin-left: 280px; */
-    /* z-index: 1; */
-    /* opacity: 0.7; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,16 +361,16 @@ section{
 }
 
 h2{
-    border-radius: 15px 15px 0px 0px;
+    /* border-radius: 15px 15px 0px 0px; */
     padding: 10px;
     background-color: orange;
+    text-align: center;
     
 }
 form{
     border-radius: 15px;
     padding: 10px;
     font-size: 23px;
-    border: 1px solid rgb(182, 15, 168);
     height: 600px;
     width: 700px;
     background-color: orange;
@@ -326,9 +397,7 @@ form:hover{
     color: black
 }
 footer{
-    height: 1000px;
-    width: 98.4vw;
-    border: 1px solid white;
+
     font-size: 24px;
     padding: 10px;
     background-color: rgb(126, 122, 122);
@@ -342,70 +411,30 @@ footer{
 .sppara{
     clear: left;
 }
-span{
-    font-size: 20px;
-    color: white;
-}
-.fd{
-    height: 50%;
-    width: 90%;
-    /* border: 1px solid white; */
-    margin: 10px auto;
-    /* background-color: rgb(147, 197, 47); */
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-}
-article div{
-    border: 1px solid thistle;
-    font-size: 30px;
-    padding: 20px;
-    border-radius: 15px;
-    opacity: 0.7;
 
-}
-article div:nth-of-type(1){
-    background-color: rgb(152, 231, 152);
-}
-article div:nth-of-type(2){
-    background-color: rgb(240, 187, 195);
-  
-}
-article div:nth-of-type(3){
-    background-color: rgb(179, 208, 218);
-}
-article div:nth-of-type(4){
-    background-color: rgb(231, 231, 211);
-}
- article div button{
-    font-size: 30px;
-    padding: 10px;
+.end{
     background-color: black;
-    color: white;
-    border: none;
-    transition: 0.4s;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+
 }
-article div button:hover{
-    transform: scale(1.1);
-    box-shadow: 2px 2px 2px gray;
-    margin-left: 30px;
+.end div{
+    padding: 20px;
     
-}
-article div a{
-    text-decoration: none;
-    color: black;
-}
-
-@media screen and (max-width:990px){
-    header{
-        position: static;
-    }
-
-    
+    background-color: black;
+    opacity: 0.2;
 
 }
-
-
+.end div:nth-of-type(1):hover{
+    opacity: 1;
+}
+.end div:nth-of-type(2):hover{
+    opacity: 1;
+}
+.end div:nth-of-type(3):hover{
+    opacity: 1;
+}
 
 
 
