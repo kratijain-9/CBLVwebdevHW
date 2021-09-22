@@ -1,0 +1,102 @@
+svg{
+    height: 6%;
+    width: 6%;
+}
+
+
+.menu{
+ 
+    display: grid;
+
+    font-size: 0.4em;
+    gap: 20px;
+
+    /* background-color: rgb(111, 107, 114); */
+    padding: 10px;
+    /* border-radius: 20px; */
+}
+
+
+
+.menu div{
+    padding: 5px;
+    /* background-color: rgb(143, 110, 127); */
+    text-align: center;
+    color: rgb(109, 226, 148);
+    font-size: 6em;
+    border-radius: 20px;
+    color: rgb(12, 34, 235);
+    /* font-family: 'Architects Daughter', cursive; */
+
+}
+.menuhead{
+    grid-column-start: 1;
+    grid-column-end: 4;
+   
+    
+}
+
+.menu ul{
+    list-style-type: none;
+    /* font-family: 'Sacramento', cursive; */
+    font-weight: 900;
+    margin-top: 20px;
+    color: black;
+    
+}
+
+@media screen and (max-width:870px) {
+    
+    .menu{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+
+        
+    }
+    .menuhead{
+        grid-column-start: 1;
+        grid-column-end: 3;
+       
+        
+    }
+   
+    
+}
+@media screen and (max-width:750px) {
+    
+    .menu{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+
+        
+    }
+    .menuhead{
+        grid-column-start: 1;
+        grid-column-end: 4;
+       
+        
+    }
+   
+    
+}
+@media screen and (max-width:620px) {
+    
+    .menu{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+ 
+        
+    }
+    .menuhead{
+        grid-column-start: 1;
+        grid-column-end: 2;
+       
+        
+    }
+   
+    
+}
+.myform{
+    border: 1px solid black;
+    padding: 20px;
+}
+.form-group{
+    padding: 20px;
+}
