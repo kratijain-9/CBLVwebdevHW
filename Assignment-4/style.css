@@ -6,19 +6,19 @@ body{
     background-color: rgb(92, 85, 85);
 }
 .navbar{
-    
+    z-index: 6;
     width: 100vw;
     background-color: rgb(92, 85, 85);
     display: flex;
     color: orange;
     font-size: 28px;
-    
+    /* height: 30px; */
     align-items: center; 
-
+    align-content: center;
     position: fixed;
     font-family: 'Architects Daughter', cursive;
 
-    z-index: 5;
+ 
    flex-wrap: wrap;
    padding: 10px;
    /* border: 1px solid yellow; */
@@ -82,108 +82,31 @@ nav div a:hover{
 }
 
 main{
+    
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     background-color: rgb(87, 83, 85);
-    grid-template-rows: repeat(2,600px);
-    
 }
-
-main article:nth-of-type(1){
-   
-    position: relative;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    
-}
-
-main article div img{
-    height: 100%;
-    width: 100%;
-    
-    
-} 
-main article:nth-of-type(1) div:nth-of-type(1){
-    z-index: 4;
-    position: absolute;
-    animation-name: fadeout;
-    animation-duration: 16s;
-    animation-delay: 1s;
-    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-/*     animation-play-state: paused; */
-    height: 100%;
-    width: 100%;
-
-}
-main article:nth-of-type(1) div:nth-of-type(2){
-    z-index: 3;
-    position: absolute;
-    animation-name: fadeout;
-    animation-duration: 17s;
-    animation-delay: 6s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-/*     animation-play-state: paused; */
-    height: 100%;
-    width: 100%;
-
-}
-main article:nth-of-type(1) div:nth-of-type(3){
-    z-index: 2;
-    position: absolute;
-    animation-name: fadeout;
-    animation-duration: 18s;
-    animation-delay: 12s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-/*     animation-play-state: paused; */
-    height: 100%;
-    width: 100%;
-
-}
-main article:nth-of-type(1) div:nth-of-type(4){
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-
-}
-
-@keyframes fadeout{
-
-    100%{
-        z-index: 4;
-       opacity: 0;
-    }
-
-}
-
-
 
 main article{
-
-    
+    background-color: white;
     text-align: center;
     font-size: 18px;
-    
+    height: 510px;  /*here*/
 }
 .art img{
-    margin-top: 40px;
-    height: 30%;
-    width: 80%;
-    
+    margin-top: 20px;
+    height: 35%;
+    width: 90%;
     box-shadow: 0px 0px 10px rgb(104, 103, 103);
     border-radius: 6px;
     
 }
-#i1,#i2{
-    margin-top: 100px;
-}
+
 main article p{
     margin-top: 9px;
     font-size: 1.2em;
-    color: rgb(163, 159, 137)
+    color: rgb(88, 85, 65)
 }
 
 .bl{
@@ -208,7 +131,7 @@ main article p{
 }
 
 main .art:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     transition: 0.35s;
     transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
     cursor: pointer;
@@ -216,33 +139,130 @@ main .art:hover{
     box-shadow: 2px 2px 5px grey;
 }
 
-@media screen and (max-width:900px) {
-    main{
-        grid-template-rows: repeat(3,540px);
-        grid-template-columns: repeat(auto-fill,minmax(380px,1fr));
-    }
-    main article:nth-of-type(1){
-   
-        position: relative;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        
-    }
-    #i1{
-        margin-top: 40px;
-    }
+
+header{
+    background-color: white;
+    position: relative;
+    height: 700px;
+    width: 100vw;
+
+}
+header div{
+    height: 700px;
+    width: 100vw;
+}
+header div img{
+    height: 100%;
+    width: 100%;
+}
+
+header div:nth-of-type(1){
+    z-index: 5;
+    position: absolute;
+    animation-name: one;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
     
 }
-@media screen and (max-width:760px) {
-    main{
-        grid-template-rows: repeat(5,510px);
+header div:nth-of-type(2){
+    z-index: 4;
+    position: absolute;
+    animation-name: two;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+header div:nth-of-type(3){
+    z-index: 3;
+    position: absolute;
+    animation-name: three;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+header div:nth-of-type(4){
+    z-index: 2;
+    position: absolute;
+    animation-name: four;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes one{
+    25%{
+        opacity: 1;
+        transform: translateY(-20px);
     }
-    .art img{
-        height: 40%;
+    50%{
+        opacity: 0;
+       
     }
-    
+    75%{
+        opacity: 0;
+       
+    }
+    100%{
+        opacity: 0;
+       
+    }
+
+}
+@keyframes two{
+    25%{
+        opacity: 0;
+       
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(-20px);
+       
+    }
+    75%{
+        opacity: 0;
+       
+    }
+    100%{
+        opacity: 0;
+       
+    }
+
+}
+@keyframes three{
+    25%{
+        opacity: 0;
+       
+    }
+    50%{
+        opacity: 0;
+       
+    }
+    75%{
+        opacity: 1;
+        transform: translateY(-20px);
+       
+    }
+    100%{
+        opacity: 0;
+       
+    }
+
+}
+@keyframes four{
+    25%{
+        opacity: 0;
+       
+    }
+    50%{
+       opacity: 0;
+    }
+    75%{
+        opacity: 0;
+       
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-20px);
+       
+    }
+
 }
 
 section{
@@ -253,27 +273,28 @@ section{
 }
 
 .menu{
- 
+    
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     font-size: 1em;
     gap: 20px;
 
-    background-color: rgb(111, 107, 114);
+    /* background-color: rgb(111, 107, 114); */
+    background-color: white;
     padding: 10px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 
 
 .menu div{
     padding: 5px;
-    background-color: rgb(143, 110, 127);
+    background-color: #a5a58d;
     text-align: center;
     color: rgb(109, 226, 148);
     font-size: 3em;
     border-radius: 20px;
-    color: burlywood;
+    color: rgb(19, 82, 45);
     font-family: 'Architects Daughter', cursive;
 
 }
@@ -435,13 +456,3 @@ footer{
 .end div:nth-of-type(3):hover{
     opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
