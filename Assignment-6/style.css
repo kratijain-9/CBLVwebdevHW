@@ -58,5 +58,8 @@ ul li{
     border-radius: 10px;
     margin: 5px;
 }
+span:hover{
+    cursor: pointer;
+}
 
 
