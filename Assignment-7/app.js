@@ -41,7 +41,7 @@ const revolve = document.querySelector('#thisone');
 function getweather(city) {
 
     //we will make a request through fetch web api
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=ddaf1f88b21793f0f28aae1b2ae57901`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=ddaf1f88b21793f0f28aae1b2ae57901`)
         .then((res) => {
 
             return res.json(); //take whole data properly
