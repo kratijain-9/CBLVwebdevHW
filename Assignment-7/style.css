@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.hidden{
+    height: 500px;
+    width: 500px;
+    
+    border-top: 7px solid #ccff33;
+     border-right: 7px solid #ccff33;
+    /* margin: 200px auto; */
+    /* background-color: black; */
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 380px;
+    animation-name: revolve;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+   
+    animation-play-state: paused;
+} 
+.nc{
+    height: 500px;
+    width: 500px;
+    
+    border-top: 7px solid #ccff33;
+     border-right: 7px solid #ccff33;
+    /* margin: 200px auto; */
+    /* background-color: black; */
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 380px;
+    animation-name: revolve;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+   
+    animation-play-state: running;
+}
+
+@keyframes revolve{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+body{
+    background-image: url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGhhaWwlMjBzdG9ybXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+
+    height: 505px;
+    width: 500px;
+    margin: 250px auto;
+    border: 1px solid yellow;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+}
+
+input{
+    display: block;
+    font-size: 22px;
+    margin: 60px 20px 15px 110px;
+    /* outline: none; */
+    padding: 12px 5px 12px 5px;
+    /* background-color: rgb(2, 58, 65); */
+    /* color: rgb(241, 237, 237); */
+    /* border: 1px solid yellow; */
+    border-radius: 4px;
+    opacity: 0.2;
+    /* box-shadow: 5px 5px 2px yellow; */
+    color: black;
+    border: none;
+    text-align: center;
+}
+input:focus{
+    background-color: black;
+    opacity: 1;
+    border: none;
+    color: blanchedalmond;
+    outline: none;
+    cursor: pointer;
+}
+
+form{
+    /* z-index: 5; */
+    position: absolute;
+    
+}
+button{
+    display: block;
+    font-size: 25px;
+    padding: 9px;
+    /* margin: 2px auto; */
+    margin-left: 160px;
+    background-color: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: 900;
+    opacity: 0.2;
+    color: black;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 1;
+    background-color: black;
+    color: wheat;
+
+}
+
+h1,h2,h3{
+    text-align: center;
+    margin-top: 10px;
+}
+h1:nth-of-type(1){
+    font-size: 35px;
+    color: darksalmon;
+}
+h2{
+    font-size: 30px;
+    color: cornsilk;
+}
+h3{
+    color: rgb(185, 226, 144);
+    font-size: 25px;
+}
+h3:nth-of-type(1){
+    margin-top: 200px;
+}
